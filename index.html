@@ -18,7 +18,8 @@
         try {
             console.log('can we see it yet?')
             console.log(AndroidInterface)
-            return AndroidInterface.doSomething ? true : false
+            // return AndroidInterface.doSomething ? true : false
+            return window['AndroidInterface'].doSomething ? true : false
         } catch {
             return false
         }
