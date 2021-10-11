@@ -14,7 +14,7 @@
         This should get replaced
     </div>
     <div>
-        Version 4
+        Version 5
     </div>
 <script>
     function weAreEmbedded() {
@@ -22,13 +22,20 @@
             console.log('can we see it yet?')
             console.log(AndroidInterface)
             // return AndroidInterface.doSomething ? true : false
-            return window['AndroidInterface'].doSomething ? true : false
+            return window['AndroidInterface'] ? true : false
+        } catch {
+            return false
+        }
+    }
+    function getObjectRepresentation() {
+        try {
+            return JSON.stringify(window['AndroidInterface'])
         } catch {
             return false
         }
     }
     function showCorrectMsg() {
-        return weAreEmbedded() ? 'Yes' : 'No'
+        return weAreEmbedded() ? 'Yes, you are: ' + getObjectRepresentation() : 'No, you are not'
     }
     function updateDisplay() {
         const ourTarget = document.getElementById('target')
