@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embedded Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <style>
+      div {
+        font-family: 'IBM Plex Mono', monospace;
+      }
+      div.other {
+        font-family: Arial;
+      }
+    </style> 
 </head>
 <body>
     <div>
@@ -13,7 +24,7 @@
     <div id="target" style="background-color: yellow; padding: 1rem; border: 1px solid black;">
         This should get replaced
     </div>
-    <div>
+    <div class="other">
         Version 5
     </div>
 <script>
